@@ -1,0 +1,8 @@
+Math.min(a, b);    // smaller value
+Math.max(a, b);    // larger value
+Math.abs(x);       // absolute value
+Math.sqrt(x);      // square root
+Math.pow(a, b);    // a^b
+Math.ceil(x);      // round up
+Math.floor(x);     // round down
+Math.round(x);     // nearest integer
