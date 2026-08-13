@@ -66,6 +66,41 @@ public class LL{
         }
         head=prev;
     }
+    void middleNode(){
+    Node temp = head;
+
+    int low = 0;
+    int high = 0;
+
+    // Count number of nodes
+    while(temp != null){
+        temp = temp.next;
+        high++;
+    }
+
+    temp = head;
+
+    int middle = (low + high) / 2;
+
+    // Move to middle node
+    for(int i = 0; i < middle; i++){
+        temp = temp.next;
+    }
+
+    System.out.println("Middle Node: " + temp.data);
+}
+void deleteDuplicates() {
+    Node temp = head;
+
+    while (temp != null && temp.next != null) {
+
+        if (temp.data == temp.next.data) {
+            temp.next = temp.next.next;
+        } else {
+            temp = temp.next;
+        }
+    }
+}
         
         
     }
