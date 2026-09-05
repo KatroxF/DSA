@@ -1,7 +1,7 @@
 
 public class removeduplicatefromsorted {
     public static void main(String[] args) {
-        int[]arr={10,10,20,30,40,50};
+        int[]arr={10,10,20,20,40,50};
         int j=0;
         int result=index(arr, j);
         System.out.println(result);
