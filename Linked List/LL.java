@@ -72,7 +72,7 @@ public class LL{
     int low = 0;
     int high = 0;
 
-    // Count number of nodes
+    
     while(temp != null){
         temp = temp.next;
         high++;
@@ -82,7 +82,7 @@ public class LL{
 
     int middle = (low + high) / 2;
 
-    // Move to middle node
+    
     for(int i = 0; i < middle; i++){
         temp = temp.next;
     }
@@ -101,6 +101,51 @@ void deleteDuplicates() {
         }
     }
 }
+ void deleteatposition(int k){
+            if(head==null){
+                return;
+            }
+            if(k==1){
+                head=head.next;
+                return;
+            }
+            int count=0;
+            Node temp=head;
+            Node prev=null;
+            while(temp!=null){
+                count++;
+                if(count==k){
+                    prev.next=prev.next.next;
+                    return;
+
+
+                }
+                prev=temp;
+                temp=temp.next;
+            }
+        }
+        void deletefirst(){
+            if(head==null){
+                return;
+            }
+            head=head.next;
+
+        }
+        void deletelast(){
+            if(head==null){
+                return;
+            }
+            if (head.next == null) {
+              head = null;
+              return;
+    }
+            Node temp=head;
+            while(temp.next.next!=null){
+                temp=temp.next;
+
+            }
+            temp.next=null;
+        }
         
         
     }

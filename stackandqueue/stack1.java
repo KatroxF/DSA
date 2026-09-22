@@ -6,6 +6,7 @@ public class stack1{
         stack.push(2);
         stack.push(3);
         stack.push(10);
+        stack.pop();
         System.out.println(stack);
     }
 }

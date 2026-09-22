@@ -1,7 +1,7 @@
 import java.util.*;
 public class nextperumtation {
     public static void main(String[] args) {
-        int[]arr={1,2,3};
+        int[]arr={1,3,2};
         int i=arr.length-2;
         while(i>=0 && arr[i]>=arr[i+1]){
             i--;
