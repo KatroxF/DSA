@@ -5,16 +5,13 @@ public class countnumber{
     }
     static void print(int n){
         if(n==5){
-            System.out.println(n);
+            System.out.println(5);
             return;
         }
-        print(n+1);
         System.out.println(n);
+        print(n+1);
         
-       
-
-
-        }
+    }
         
     
 }

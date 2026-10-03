@@ -16,7 +16,7 @@ public class mergesort{
         int mid=arr.length/2;
         int[]start=mergeSort( Arrays.copyOfRange(arr, 0, mid));
         int[]end=mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
-        return merge(start,end);
+        return merge(start,end);                                                    
 
     }
     static int[]merge(int[]start,int[]end){
