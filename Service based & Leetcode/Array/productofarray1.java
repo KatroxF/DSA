@@ -13,9 +13,11 @@ public class productofarray1 {
         for(int i=1;i<arr.length;i++){
             prefix[i]=prefix[i-1]*arr[i-1];
         }
+        System.out.println(Arrays.toString(prefix));
         for(int i=n-2;i>=0;i--){
             suffix[i]=suffix[i+1]*arr[i+1];
         }
+        System.out.println(Arrays.toString(suffix));
         for(int i=0;i<arr.length;i++){
             answer[i]=prefix[i]*suffix[i];
 

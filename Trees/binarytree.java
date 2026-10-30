@@ -38,9 +38,9 @@ public class binarytree {
         }
     }
     public void display(){
-        display(this.root,"");
+        display(this.root,"");  //this refer to tree object root is the instance variable of type Node
     }
-    public void display(Node node,String indent){
+   public void display(Node node,String indent){
         if(node==null){
             return;
         }
@@ -48,12 +48,33 @@ public class binarytree {
         display(node.left,indent+ "\t");
         display(node.right,indent+ "\t");
     }
+    public void bfs(){
+        if(this.root==null){
+            return;
+
+        }
+        Queue<Node> queue=new LinkedList<>();
+        queue.offer(this.root);
+        while(!queue.isEmpty()){
+            Node current=queue.poll();
+            if(current.left!=null){
+                queue.offer(current.left);
+
+            }
+            if(current.right!=null){
+                queue.offer(current.right);
+            }
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         binarytree tree=new binarytree();
         tree.populate(scanner);
         System.out.println("\nYour binary tree");
         tree.display();
+        scanner.close();
+        System.out.println("\nBFS traversal:");
+        tree.bfs();
         scanner.close();
 
     }

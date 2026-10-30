@@ -1,6 +1,6 @@
 public class sum {
     public static void main(String[] args) {
-        int result=sum(5);
+        int result=sum(4);
         System.out.println(result);
         
     }
